@@ -25,14 +25,16 @@ SOURCES += main.cpp\
     PortListener.cpp \
     chromificador.cpp \
     comunicadorjs.cpp \
-    mapa.cpp
+    mapa.cpp \
+    client.cpp
 
 HEADERS  += mainwindow.h \
     plot.h \
     PortListener.h \
     comunicadorjs.h \
     chromificador.h \
-    mapa.h
+    mapa.h \
+    client.h
 
 INCLUDEPATH +=.
 
