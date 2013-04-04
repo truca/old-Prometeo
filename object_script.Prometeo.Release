@@ -11,7 +11,7 @@ INPUT(
 ./build/release/obj/chromificador.o
 ./build/release/obj/comunicadorjs.o
 ./build/release/obj/mapa.o
-./build/release/obj/client.o
+./build/release/obj/tcpclient.o
 ./build/release/obj/moc_qextwineventnotifier_p.o
 ./build/release/obj/moc_mainwindow.o
 ./build/release/obj/moc_plot.o
@@ -19,4 +19,5 @@ INPUT(
 ./build/release/obj/moc_comunicadorjs.o
 ./build/release/obj/moc_chromificador.o
 ./build/release/obj/moc_mapa.o
+./build/release/obj/moc_tcpclient.o
 );

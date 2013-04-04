@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT       += core gui network
 QT       += webkit
 
 TARGET = Prometeo
@@ -26,7 +26,7 @@ SOURCES += main.cpp\
     chromificador.cpp \
     comunicadorjs.cpp \
     mapa.cpp \
-    client.cpp
+    tcpclient.cpp
 
 HEADERS  += mainwindow.h \
     plot.h \
@@ -34,7 +34,7 @@ HEADERS  += mainwindow.h \
     comunicadorjs.h \
     chromificador.h \
     mapa.h \
-    client.h
+    tcpclient.h
 
 INCLUDEPATH +=.
 
