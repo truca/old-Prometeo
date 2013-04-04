@@ -15,6 +15,9 @@ public:
   void start(QString address, quint16 port);
 public slots:
   void startTransfer();
+  void SendLonLat(float lon, float lat);
+  void SendYaw(float yaw);
+  void SendHight(float hight);
 private:
   QTcpSocket client;
 };

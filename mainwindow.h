@@ -5,6 +5,7 @@
 #include <QTimer>
 #include <QFile>
 #include "PortListener.h"
+#include "tcpclient.h"
 
 namespace Ui {
 class MainWindow;
@@ -94,6 +95,7 @@ private:
     void swapWaypointUI();
     void swapHomeUI();
     void swapViewUI();
+    TCPClient cliente;
     QTimer timerSetYawToHome_valueChanged;
     QTimer timerSetAltura;
 };

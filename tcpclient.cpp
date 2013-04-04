@@ -22,3 +22,7 @@ void TCPClient::startTransfer()
 {
   client.write("Hello, world", 13);
 }
+
+void TCPClient::SendLonLat(float lon, float lat){}
+void TCPClient::SendYaw(float yaw){}
+void TCPClient::SendHight(float hight){}

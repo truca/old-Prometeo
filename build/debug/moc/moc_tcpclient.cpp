@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'tcpclient.h'
 **
-** Created: Thu 4. Apr 02:33:25 2013
+** Created: Thu 4. Apr 06:59:18 2013
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.1)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -23,7 +23,7 @@ static const uint qt_meta_data_TCPClient[] = {
        6,       // revision
        0,       // classname
        0,    0, // classinfo
-       1,   14, // methods
+       4,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -32,12 +32,17 @@ static const uint qt_meta_data_TCPClient[] = {
 
  // slots: signature, parameters, type, tag, flags
       11,   10,   10,   10, 0x0a,
+      35,   27,   10,   10, 0x0a,
+      63,   59,   10,   10, 0x0a,
+      84,   78,   10,   10, 0x0a,
 
        0        // eod
 };
 
 static const char qt_meta_stringdata_TCPClient[] = {
-    "TCPClient\0\0startTransfer()\0"
+    "TCPClient\0\0startTransfer()\0lon,lat\0"
+    "SendLonLat(float,float)\0yaw\0SendYaw(float)\0"
+    "hight\0SendHight(float)\0"
 };
 
 void TCPClient::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
@@ -47,10 +52,12 @@ void TCPClient::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, v
         TCPClient *_t = static_cast<TCPClient *>(_o);
         switch (_id) {
         case 0: _t->startTransfer(); break;
+        case 1: _t->SendLonLat((*reinterpret_cast< float(*)>(_a[1])),(*reinterpret_cast< float(*)>(_a[2]))); break;
+        case 2: _t->SendYaw((*reinterpret_cast< float(*)>(_a[1]))); break;
+        case 3: _t->SendHight((*reinterpret_cast< float(*)>(_a[1]))); break;
         default: ;
         }
     }
-    Q_UNUSED(_a);
 }
 
 const QMetaObjectExtraData TCPClient::staticMetaObjectExtraData = {
@@ -85,9 +92,9 @@ int TCPClient::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 1)
+        if (_id < 4)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 1;
+        _id -= 4;
     }
     return _id;
 }

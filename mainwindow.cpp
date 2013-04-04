@@ -201,14 +201,10 @@ void MainWindow::on_boton_home_clicked(){
 void MainWindow::swapWaypointUI(){
     if(!WaypointMode){
         WaypointMode=true;
-//        ui->boton_ruta->setText("Stahp!");
-//        ui->boton_ruta->setStyleSheet("color: red");
         ui->boton_ruta->setChecked(true);
     }
     else{
         WaypointMode=false;
-//        ui->boton_ruta->setText("Generar ruta");
-//        ui->boton_ruta->setStyleSheet("");
         ui->boton_ruta->setChecked(false);
     }
 }
@@ -216,14 +212,10 @@ void MainWindow::swapWaypointUI(){
 void MainWindow::swapViewUI(){
     if(!ViewMode){
         ViewMode=true;
-//        ui->boton_view->setText("Stahp!");
-//        ui->boton_view->setStyleSheet("color: red");
         ui->boton_view->setChecked(true);
     }
     else{
         ViewMode=false;
-//        ui->boton_view->setText("Generar Vista");
-//        ui->boton_view->setStyleSheet("");
         ui->boton_view->setChecked(false);
     }
 }
@@ -231,14 +223,10 @@ void MainWindow::swapViewUI(){
 void MainWindow::swapHomeUI(){
     if(!HomeMode){
         HomeMode=true;
-//        ui->boton_home->setText("Stahp!");
-//        ui->boton_home->setStyleSheet("color: red");
         ui->boton_home->setChecked(true);
     }
     else{
         HomeMode=false;
-//        ui->boton_home->setText("Setear Home");
-//        ui->boton_home->setStyleSheet("");
         ui->boton_home->setChecked(false);
     }
 }
