@@ -21,6 +21,8 @@ public:
 
 signals:
     void quit();
+    void nuevaAlt(double);
+    void nuevoYaw(double);
 
 private slots:
     void timeout();

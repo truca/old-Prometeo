@@ -35,6 +35,8 @@ MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
+    cliente = new TCPClient();
+    cliente.start("127.0.0.1", 8888);
 
     rcv = new PortListener();
     rcv->selectPortName(this); // preguntando a usuario por puerta serial
@@ -71,6 +73,10 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(rcv, SIGNAL(newGPS(double,double)), ui->webView, SLOT(addPosition(double,double)));
     connect(rcv, SIGNAL(newAltura(double)), this, SLOT(newAltura(double)));
     connect(rcv, SIGNAL(newYaw(double)), this, SLOT(newYaw(double)));
+
+    connect(rcv , SIGNAL(nuevoGPS(double, double)), cliente, SLOT(sendLatLon(double, double)));
+    connect(this, SIGNAL(nuevoYaw(double)), cliente, SLOT(sendYaw(double)));
+    connect(this, SIGNAL(nuevaAlt(double)), cliente, SLOT(sendAltura(double)));
 
     timerSetYawToHome_valueChanged.setSingleShot(true);
     connect(&timerSetYawToHome_valueChanged, SIGNAL(timeout()), this, SLOT(dialYaw_valueChanged_timeout()));
@@ -307,10 +313,12 @@ void MainWindow::dialYaw_valueChanged_timeout()
 
 void MainWindow::newAltura(double altura) {
     ui->label_altura->setText(QString::number(altura, 'f', 1));
+    emit newAltura(altura);
 }
 
 void MainWindow::newYaw(double yaw) {
     ui->label_yaw->setText(QString::number(yaw, 'f', 1));
+    emit newYaw(yaw);
 }
 
 void MainWindow::on_tabWidget_currentChanged(int index)
